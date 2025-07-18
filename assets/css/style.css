@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: montserrat-regular, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-color: #eee;
+}
+
+header {
+    font-size: 0.8rem;
+    background-color: #fff;
+}
+
+ul {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 1em;
+}
+
+li {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #505050;
+    transition: 0.3s all;
+}
+
+a:hover {
+    color: #0f0f0f;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    transition: width 0.4s ease;
+    width: 30px;
+}
+
+.search-bar {
+    padding: 4px 8px;
+    border: 1px solid #505050;
+    border-radius: 2em;
+    opacity: 0;
+    width: 0;
+    transition: width 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+}
+
+.search-bar:focus {
+    outline: none;
+}
+
+.search-btn {
+    position: absolute;
+    right: 8px;
+    width: 12px;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.create-account-btn {
+    background-color: #202020;
+    color: #e4e4e4;
+    padding: 6px 8px;
+    border-radius: 2em;
+}
+
+.create-account-btn:hover {
+    color: #fff;
+}
+
+.hero {
+    height: 90vh;
+    background-image: url("../images/iphone_wallpaper3.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 1em;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.cta-btn {
+    background-color: #fff;
+    color: #202020;
+    padding: 0.8em 1.5em;
+    width: fit-content;
+    margin: auto;
+    border-radius: 2em;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.cta-btn:hover {
+  background-color: #e4e4e4;
+}
