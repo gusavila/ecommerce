@@ -110,26 +110,29 @@ a:hover {
 }
 
 .hero {
-    height: 80vh;
+    height: 85vh;
     background-image: url("../images/iphone_wallpaper3.webp");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
+    margin-top: 3rem;
     text-align: center;
     position: relative;
-    color: var(--light);
     animation: zoomIn 14s ease-in-out infinite alternate;
 }
 
 .hero::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    background: linear-gradient(180deg, transparent, #eee);
+    bottom: 0;
+    height: 50%;
+    left: 0;
+    width: 100%;
+    z-index: 3;
 }
 
 .hero-content {
@@ -149,6 +152,7 @@ a:hover {
     background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #5498ff, #ff6ec4);
     background-size: 300% 300%;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradientMove 6s ease infinite;
 }
@@ -166,10 +170,12 @@ a:hover {
     border-radius: 2em;
     transition: background 0.3s ease;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .cta-btn:hover {
-  background-color: var(--light);
+  background-color: var(--darker);
+  color: var(--light);
 }
 
 .container {
@@ -186,7 +192,7 @@ a:hover {
 .flex-container {
     margin-top: 1rem;
     overflow: hidden;
-    padding: 0;
+    
 }
 
 .item {
@@ -221,21 +227,54 @@ a:hover {
     color: var(--lighter);
 }
 
+.about {
+    background-image: url("../images/reparo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 600px;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.about .container {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about h2 {
+    color: #fff;
+    margin-bottom: 0;
+    z-index: 4;
+    font-size: 3rem;
+}
+
 .about p {
-    max-width: 500px;
-    font-size: 2rem;
+    color: var(--lighter);
+    font-size: 1.6rem;
     padding: 2rem;
+    z-index: 4;
 }
 
 .about img {
     border-radius: 1rem;
 }
 
-.about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 @keyframes gradientMove {
     0% {
