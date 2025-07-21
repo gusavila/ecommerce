@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+:root {
+    --green: #289e19;
+    --dark: #505050;
+    --darker: #0f0f0f;
+    --light: #eee;
+    --lighter: #fff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,16 +17,20 @@
 body {
     font-family: montserrat-regular, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
-    color: #505050;
-    background-color: #eee;
+    color: var(--dark);
+    background-color: var(--light);
 }
 
 header {
     font-size: 0.8rem;
-    background-color: #fff;
+    background-color: var(--light);
     position: sticky;
     top: 0;
     z-index: 10;
+}
+
+section {
+    margin-bottom: 6rem;
 }
 
 nav {
@@ -42,12 +54,12 @@ li {
 
 a {
     text-decoration: none;
-    color: #505050;
+    color: var(--dark);
     transition: 0.3s all;
 }
 
 a:hover {
-    color: #0f0f0f;
+    color: var(--darker);
 }
 
 .search-container {
@@ -66,7 +78,7 @@ a:hover {
 
 .search-bar {
     padding: 4px 8px;
-    border: 1px solid #505050;
+    border: 1px solid var(--dark);
     border-radius: 2em;
     opacity: 0;
     width: 0;
@@ -87,19 +99,18 @@ a:hover {
 }
 
 .create-account-btn {
-    background-color: #202020;
-    color: #e4e4e4;
-    padding: 6px 8px;
+    background-color: var(--darker);
+    color: var(--lighter);
+    padding: 6px 10px;
     border-radius: 2em;
 }
 
 .create-account-btn:hover {
-    color: #fff;
+    color: var(--light);
 }
 
 .hero {
     height: 80vh;
-    margin-bottom: 3em;
     background-image: url("../images/iphone_wallpaper3.webp");
     background-size: cover;
     background-position: top;
@@ -109,7 +120,8 @@ a:hover {
     justify-content: center;
     text-align: center;
     position: relative;
-    color: #fff;
+    color: var(--light);
+    animation: zoomIn 14s ease-in-out infinite alternate;
 }
 
 .hero::before {
@@ -133,13 +145,21 @@ a:hover {
     font-size: 2.5rem;
 }
 
+.hero .company-name {
+    background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #5498ff, #ff6ec4);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 6s ease infinite;
+}
+
 .hero p {
     font-size: 1.2rem;
 }
 
 .cta-btn {
-    background-color: #fff;
-    color: #202020;
+    background-color: var(--lighter);
+    color: var(--darker);
     padding: 0.8em 1.5em;
     width: fit-content;
     margin: auto;
@@ -149,35 +169,41 @@ a:hover {
 }
 
 .cta-btn:hover {
-  background-color: #e4e4e4;
+  background-color: var(--light);
 }
 
-.products-container {
+.container {
     max-width: 1200px;
     margin: auto;
     padding: 0.7rem;
 }
 
+.container h2 {
+    margin-bottom: 3rem;
+    color: var(--darker);   
+}
+
 .flex-container {
     margin-top: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    overflow: hidden;
+    padding: 0;
 }
 
 .item {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: var(--lighter);
     padding-bottom: 1em;
     border-radius: 1em;
     gap: 0.5rem;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
-    transition: 0.3s box-shadow ease;
+    transition: box-shadow 0.3s  ease, transform 0.3s  ease;
 }
 
 .item:hover {
     cursor: pointer;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
 .item img {
@@ -191,6 +217,43 @@ a:hover {
     border: none;
     border-radius: 0.4rem;
     cursor: pointer;
-    background-color: #289e19;
-    color: #fff;
+    background-color: var(--green);
+    color: var(--lighter);
+}
+
+.about p {
+    max-width: 500px;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.about img {
+    border-radius: 1rem;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 120%;
+  }
 }
