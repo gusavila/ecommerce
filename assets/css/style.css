@@ -29,10 +29,6 @@ header {
     z-index: 10;
 }
 
-section {
-    margin-bottom: 6rem;
-}
-
 nav {
     max-width: 1200px;
     margin: auto;
@@ -181,7 +177,7 @@ a:hover {
 .container {
     max-width: 1200px;
     margin: auto;
-    padding: 0.7rem;
+    padding: 4rem 1rem;
 }
 
 .container h2 {
@@ -192,7 +188,6 @@ a:hover {
 .flex-container {
     margin-top: 1rem;
     overflow: hidden;
-    
 }
 
 .item {
@@ -274,6 +269,65 @@ a:hover {
     border-radius: 1rem;
 }
 
+.testimonials {
+    background-color: #f9f9f9;
+    text-align: center;
+    overflow: hidden;
+}
+
+.testimonials h2 {
+  margin-bottom: 4rem;
+  font-size: 2rem;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.testimonial-list {
+    animation: scroll 60s linear infinite;
+    width: max-content;
+}
+
+.testimonial-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    width: 300px;
+    margin: 0 1rem;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.testimonial-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.testimonial-item p {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.testimonial-item blockquote {
+  font-style: italic;
+}
+
+.testimonial-item .stars {
+    color: goldenrod;
+    font-size: 1.2rem;
+}
+
 
 
 @keyframes gradientMove {
@@ -291,8 +345,17 @@ a:hover {
 @keyframes zoomIn {
     0% {
     background-size: 100%;
-  }
+    }
   100% {
     background-size: 120%;
-  }
+    }
+}
+
+@keyframes scroll {
+    0% {
+    transform: translateX(0);
+    }
+    100% {
+    transform: translateX(-50%);
+    }
 }
