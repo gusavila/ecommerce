@@ -58,6 +58,8 @@ a:hover {
     color: var(--darker);
 }
 
+/* Header */
+
 .search-container {
     position: relative;
 }
@@ -104,6 +106,8 @@ a:hover {
 .create-account-btn:hover {
     color: var(--light);
 }
+
+/* Hero Section */
 
 .hero {
     height: 85vh;
@@ -157,7 +161,7 @@ a:hover {
     font-size: 1.2rem;
 }
 
-.cta-btn {
+.hero .cta-btn {
     background-color: var(--lighter);
     color: var(--darker);
     padding: 0.8em 1.5em;
@@ -169,19 +173,26 @@ a:hover {
     transition: all 0.3s ease;
 }
 
-.cta-btn:hover {
-  background-color: var(--darker);
-  color: var(--light);
+.hero .cta-btn:hover {
+    background-color: var(--darker);
+    color: var(--light);
 }
+
+/* Main Products Section */
 
 .container {
     max-width: 1200px;
+    min-height: 70vh;
     margin: auto;
-    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .container h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    font-size: 2rem;
     color: var(--darker);   
 }
 
@@ -208,8 +219,9 @@ a:hover {
 }
 
 .item img {
-    width: 210px;
-    border-radius: 1em
+    width: 100%;
+    max-width: 210px;
+    border-radius: 1em;
 }
 
 .item button {
@@ -221,6 +233,8 @@ a:hover {
     background-color: var(--green);
     color: var(--lighter);
 }
+
+/* About Section */
 
 .about {
     background-image: url("../images/reparo.jpg");
@@ -243,11 +257,6 @@ a:hover {
 }
 
 .about .container {
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 
@@ -269,6 +278,25 @@ a:hover {
     border-radius: 1rem;
 }
 
+/* Services Section */
+
+.services li img {
+    background-color: var(--darker);
+    padding: 0.5rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+}
+
+.services h3 {
+    margin-bottom: 0.5rem;
+}
+
+.services p {
+    max-width: 300px;
+}
+
+/* Testimonials Section */
+
 .testimonials {
     background-color: #f9f9f9;
     text-align: center;
@@ -276,22 +304,25 @@ a:hover {
 }
 
 .testimonials h2 {
-  margin-bottom: 4rem;
-  font-size: 2rem;
+    margin-bottom: 4rem;
+    font-size: 2rem;
 }
 
-.carousel {
+.testimonials .carousel {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-.testimonial-list {
+.testimonials .carousel-list {
     animation: scroll 60s linear infinite;
     width: max-content;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
 }
 
-.testimonial-item {
+.testimonials .carousel-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -306,24 +337,24 @@ a:hover {
     flex-shrink: 0;
 }
 
-.testimonial-item img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
+.testimonials .carousel-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
-.testimonial-item p {
+.testimonials .carousel-item p {
     font-size: 0.9rem;
     margin-bottom: 0.3rem;
 }
 
-.testimonial-item blockquote {
-  font-style: italic;
+.testimonials .carousel-item blockquote {
+    font-style: italic;
 }
 
-.testimonial-item .stars {
+.testimonials .carousel-item .stars {
     color: goldenrod;
     font-size: 1.2rem;
 }

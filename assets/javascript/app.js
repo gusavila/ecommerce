@@ -1,7 +1,7 @@
 const searchBtn = document.querySelector(".search-btn");
 const searchBox = document.querySelector(".search-box");
 const searchBar = document.querySelector(".search-bar");
-const list = document.querySelector('.testimonial-list');
+const list = document.querySelector('.carousel-list');
 
 list.innerHTML += list.innerHTML
 
