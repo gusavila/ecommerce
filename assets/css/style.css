@@ -2,6 +2,7 @@
 
 :root {
     --green: #289e19;
+    --cyan : #00c4cc;
     --dark: #505050;
     --darker: #0f0f0f;
     --light: #eee;
@@ -21,19 +22,6 @@ body {
     background-color: var(--light);
 }
 
-header {
-    font-size: 0.8rem;
-    background-color: var(--light);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-nav {
-    max-width: 1200px;
-    margin: auto;
-}
-
 ul {
     display: flex;
     flex-direction: row;
@@ -41,7 +29,6 @@ ul {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    padding: 0.7rem;
 }
 
 li {
@@ -55,10 +42,30 @@ a {
 }
 
 a:hover {
-    color: var(--darker);
+    color: var(--cyan);
 }
 
 /* Header */
+
+header {
+    font-size: 0.8rem;
+    background-color: var(--light);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: 0.4s all;
+}
+
+.scrolled {
+    background-color: var(--lighter);
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    max-width: 1200px;
+    padding: 0.6rem 1rem;
+    margin: auto;
+}
 
 .search-container {
     position: relative;
@@ -105,6 +112,7 @@ a:hover {
 
 .create-account-btn:hover {
     color: var(--light);
+    background-color: var(--cyan);
 }
 
 /* Hero Section */
@@ -127,9 +135,9 @@ a:hover {
 .hero::before {
     content: "";
     position: absolute;
-    background: linear-gradient(180deg, transparent, #eee);
+    background: linear-gradient(180deg, transparent 10%, var(--light));
     bottom: 0;
-    height: 50%;
+    height: 45%;
     left: 0;
     width: 100%;
     z-index: 3;
@@ -148,8 +156,8 @@ a:hover {
     font-size: 2.5rem;
 }
 
-.hero .company-name {
-    background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #5498ff, #ff6ec4);
+.hero .gradient-background {
+    background: linear-gradient(90deg, #00c4cc, #7873f5, #ff6ec4, #00c4cc, #ff6ec4);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -162,19 +170,17 @@ a:hover {
 }
 
 .hero .cta-btn {
-    background-color: var(--lighter);
-    color: var(--darker);
+    background-color: var(--darker);
+    color: var(--lighter);
     padding: 0.8em 1.5em;
     width: fit-content;
     margin: auto;
     border-radius: 2em;
-    transition: background 0.3s ease;
     font-weight: bold;
-    transition: all 0.3s ease;
 }
 
 .hero .cta-btn:hover {
-    background-color: var(--darker);
+    background-color: var(--cyan);
     color: var(--light);
 }
 
@@ -183,6 +189,7 @@ a:hover {
 .container {
     max-width: 1200px;
     min-height: 70vh;
+    padding: 1rem;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -210,6 +217,7 @@ a:hover {
     gap: 0.5rem;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s  ease, transform 0.3s  ease;
+    margin: 0.6rem;
 }
 
 .item:hover {
@@ -242,7 +250,6 @@ a:hover {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    height: 600px;
 }
 
 .about::before {
@@ -281,7 +288,7 @@ a:hover {
 /* Services Section */
 
 .services li img {
-    background-color: var(--darker);
+    background-color: var(--cyan);
     padding: 0.5rem;
     border-radius: 2rem;
     margin-bottom: 1rem;
@@ -359,6 +366,81 @@ a:hover {
     font-size: 1.2rem;
 }
 
+footer {
+    background-color: var(--darker);
+    color: var(--light);
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer .container {
+    min-height: fit-content;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-section p {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section img {
+    width: 18px;
+    background-color: #00c4cc;
+    border-radius: 2rem;
+    padding: 2px;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #00c4cc;
+}
+
+.footer-section ul {
+    padding: 0;
+    flex-direction: column;
+    align-items: start;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    display: flex;
+    gap: 0.5rem;
+    color: var(--light);
+}
+
+.footer-section a:hover {
+    color: #00c4cc;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    text-align: center;
+    padding-top: 1rem;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.footer-bottom a {
+    color: var(--light);
+}
+
+.footer-bottom a:hover {
+    color: #00c4cc;
+}
 
 
 @keyframes gradientMove {

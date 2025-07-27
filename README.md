@@ -1,4 +1,4 @@
-git# 📱 NextCell
+📱 NextCell
 
 **NextCell** is a fictional mobile store website created for portfolio purposes. The project was built using **HTML, CSS, and vanilla JavaScript**, focusing on a clean, responsive layout and smooth user experience.
 
