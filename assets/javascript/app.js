@@ -1,10 +1,16 @@
 const searchBtn = document.querySelector(".search-btn");
 const searchBox = document.querySelector(".search-box");
 const searchBar = document.querySelector(".search-bar");
-const list = document.querySelector('.carousel-list');
+const list = document.querySelector(".carousel-list");
 const header = document.querySelector("header");
+const toggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-list.innerHTML += list.innerHTML
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+list.innerHTML += list.innerHTML;
 
 let isExpanded = false;
 
@@ -15,7 +21,6 @@ document.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
-
 
 searchBtn.addEventListener("click", () => {
   if (!isExpanded) {

@@ -5,18 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/fonts.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/media.css" />
     <title>NextCell</title>
   </head>
   <body>
     <header>
       <nav>
-        <ul>
-          <li class="logo"><a href="#">NextCell</a></li>
+        <div class="mobile-menu">
+          <h1 class="logo"><a href="#">NextCell</a></h1>
+          <div class="nav-icons">
+            <a href="#"
+              ><img
+                src="assets/images/icons/cart-shopping-solid-lg.svg"
+                alt="Ícone do carrinho"
+            /></a>
+            <img
+              class="menu-toggle"
+              src="assets/images/icons/bars-solid.svg"
+              alt="ícone do menu"
+            />
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li class="logo desktop-only">
+            <h1><a href="#">NextCell</a></h1>
+          </li>
           <li><a href="#">Celulares</a></li>
           <li><a href="#">Fones</a></li>
           <li><a href="#">Carregadores</a></li>
           <li><a href="#">Capinhas</a></li>
           <li><a href="#">Ajuda</a></li>
+
           <li class="search-container">
             <div class="search-box">
               <input class="search-bar" type="text" placeholder="Buscar..." />
@@ -27,13 +46,27 @@
               />
             </div>
           </li>
-          <li>
+
+          <li class="cart-icon desktop-only">
             <a href="#"
               ><img
                 src="assets/images/icons/cart-shopping-solid.svg"
                 alt="Ícone de carrinho"
             /></a>
           </li>
+
+          <li class="favorite-icon desktop-only">
+            <a href="#"
+              ><img
+                src="assets/images/icons/heart-solid.svg"
+                alt="Ícone de favoritos"
+            /></a>
+          </li>
+
+          <li class="mobile-only">
+            <a href="#">Favoritos</a>
+          </li>
+
           <li><a href="#">Entrar</a></li>
           <li><a class="create-account-btn" href="#">Criar&nbsp;conta</a></li>
         </ul>
@@ -43,7 +76,9 @@
       <section class="hero">
         <div class="hero-content">
           <h1>Bem-vindo a NextCell</h1>
-          <p class="gradient-background">Conectando você ao melhor da tecnologia, com rapidez e confiança.</p>
+          <p class="gradient-background">
+            Conectando você ao melhor da tecnologia, com rapidez e confiança.
+          </p>
           <a href="#" class="cta-btn">Ver produtos</a>
         </div>
       </section>
@@ -292,8 +327,11 @@
 
         <div class="footer-bottom">
           <p>
-            Este site é um projeto fictício feito com ❤️ por <a href="https://www.linkedin.com/in/gustavoavilawebdeveloper/">Gustavo Ávila</a> apenas para fins educacionais
-            e de portfólio.
+            Este site é um projeto fictício feito com ❤️ por
+            <a href="https://www.linkedin.com/in/gustavoavilawebdeveloper/"
+              >Gustavo Ávila</a
+            >
+            apenas para fins educacionais e de portfólio.
           </p>
         </div>
       </footer>
