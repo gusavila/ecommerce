@@ -61,8 +61,4 @@
     .hero::before {
         display: none;
     }
-
-    .main-products .flex-container {
-        flex-wrap: wrap;
-    }
 }

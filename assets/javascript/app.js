@@ -1,18 +1,34 @@
 const searchBtn = document.querySelector(".search-btn");
 const searchBox = document.querySelector(".search-box");
 const searchBar = document.querySelector(".search-bar");
-const list = document.querySelector(".carousel-list");
+const carouselList = document.querySelector(".carousel-list");
 const header = document.querySelector("header");
 const toggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
+const container = document.querySelector(".carousel-container");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const scrollAmount = 220;
+let isExpanded = false;
+
+carouselList.innerHTML += carouselList.innerHTML;
+
+if (container && prevBtn && nextBtn) {
+   
+  prevBtn.addEventListener("click", () => {
+    console.log("← clicado");
+    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
+
+  nextBtn.addEventListener("click", () => {
+     console.log("clicado ← ");
+    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  });
+}
 
 toggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
-
-list.innerHTML += list.innerHTML;
-
-let isExpanded = false;
 
 document.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
